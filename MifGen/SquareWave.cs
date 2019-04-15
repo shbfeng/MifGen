@@ -8,30 +8,30 @@ using System.Threading.Tasks;
 
 namespace MifGen
 {
-    static class SquareWave
+    static class TriWave
     {
     
     
-        public static void Square_gen()
+        public static void Tri_gen()
         {
            
             double i;
-            long t = (long)(Math.Pow(2, 16) - 1);
+            long t = (long)Math.Pow(2, 15) ;
             ArrayList list = new ArrayList();
             long counter = 0;
             string c_or_s;
             // 向ArrayList中添加一些内容
             int add = list.Add("MEMORY_INITIALIZATION_RADIX=16;");
             list.Add("MEMORY_INITIALIZATION_VECTOR=");
-            for (i = 0; i < Math.PI + 1; i = i + (Math.PI / (t + 1)))
+            for (i = 0; i < t + 1; i ++)
             {
-                var y = Math.Sin(i);
-                decimal  r = (decimal) Math.Ceiling(y * t);
+                var y = ((Math.Pow(2,14)-1)>i)? 1:0;
+                
                 // Console.WriteLine(r);
 
                 c_or_s = counter == (long)(Math.Pow(2, 15)) ? ";" : ",";
                
-                var temp = Convert.ToString((long) r, 16) + c_or_s;
+                var temp = Convert.ToString((long) y, 16) + c_or_s;
                 add = list.Add(temp);
 
                 counter = counter + 1;
@@ -40,7 +40,7 @@ namespace MifGen
             // Console.WriteLine(counter);
             // Console.ReadKey();
             // 创建文件。如果文件存在则覆盖
-            var fs = File.Open(@"d:\square.coe", FileMode.Create);
+            var fs = File.Open(@"d:\Triangle.coe", FileMode.Create);
             // 创建写入流
             var wr = new StreamWriter(fs);
             // 将ArrayList中的每个项逐一写入文件
