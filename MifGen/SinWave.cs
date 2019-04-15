@@ -27,7 +27,7 @@ namespace MifGen
             {
                 var y = Math.Sin(i);
                 decimal  r = (decimal) Math.Ceiling(y * t);
-                // Console.WriteLine(r);
+                
 
                 c_or_s = counter == (long)(Math.Pow(2, 15)) ? ";" : ",";
                
