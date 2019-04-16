@@ -14,7 +14,7 @@ namespace MifGen
     
         public static void Tri_gen()
         {
-           
+         ////  
             double i;
             long t = (long)Math.Pow(2, 15) ;
             ArrayList list = new ArrayList();
