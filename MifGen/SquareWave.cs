@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MifGen
 {
-    static class TriWave
+    static class SquareWave
     {
     
     

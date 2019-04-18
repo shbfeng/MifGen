@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace MifGen
 {
-    static class SinWave
+     class SinWave
     {
     
     
-         public static void Sin_gen()
+         public  void Sin_gen()
         {
            
             double i;

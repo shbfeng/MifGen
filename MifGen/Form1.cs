@@ -37,12 +37,13 @@ namespace MifGen
 
         private void Button1_Click(object sender, EventArgs e)
         {
-           if (radio_button_sin.Enabled == true)
-            SinWave.Sin_gen();
+           SinWave usinwave = null;
+            if (radio_button_sin.Enabled == true)
+            usinwave.Sin_gen();
            else if(radio_button_tri.Enabled == true)
-            SinWave.Sin_gen();
+                usinwave.Sin_gen();
             else if (radio_button_square.Enabled == true)
-               SinWave.Sin_gen();
+                usinwave.Sin_gen();
 
 
         }
